@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="smart.till.printer" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+xmlns:android="http://schemas.android.com/apk/res/android">
+<name>smartTillPrinter</name>
+<js-module name="smartTillPrinter" src="www/smartTillPrinter.js">
+<clobbers target="smartTillPrinter" />
+</js-module>
+<platform name="android">
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="smartTillPrinter">
+<param name="android-package" value="smart.till.printer.smartTillPrinter" />
+</feature>
+</config-file>
+<!-- <config-file target="AndroidManifest.xml" parent="/manifest/application">
+       <activity android:label="Printer Activity" android:name="com.android.printApis.Print.PrintActivity"></activity>
+    </config-file> -->
+<config-file parent="/*" target="AndroidManifest.xml">
+</config-file>
+<source-file src="src/android/smart/till/printer/smartTillPrinter.java" target-dir="src/smart/till/printer/smartTillPrinter" />
+<source-file src="src/android/com/android/printApis/Mini/MiniPrinterManager.java" target-dir="src/com/android/PrintApis/Mini/MiniPrinterManager" />
+<source-file src="src/android/com/android/printApis/Mini/ThreadPoolManager.java" target-dir="src/com/android/PrintApis/Mini/ThreadPoolManager" />
+<!-- <source-file src="src/android/com/android/printApis/Print/PrintActivity.java" target-dir="src/com/android/PrintApis/Print/PrintActivity" />
+<source-file src="src/android/com/android/printApis/Print/PrintByLibActivity.java" target-dir="src/com/android/PrintApis/Print/PrintByLibActivity" />
+<source-file src="src/android/com/android/printApis/Print/PrinterData.java" target-dir="src/com/android/PrintApis/Print/PrinterData" />
+<source-file src="src/android/com/android/printApis/Print/PrinterHelp.java" target-dir="src/com/android/PrintApis/Print/PrinterHelp" />
+<source-file src="src/android/com/android/printApis/Print/TypeActivity.java" target-dir="src/com/android/PrintApis/Print/TypeActivity" /> -->
+<source-file src="src/android/com/android/printApis/Utils.java" target-dir="src/com/android/PrintApis/Utils" />
+<lib-file src="src/android/libs/guavalib.jar" />
+<lib-file src="src/android/libs/scanlib.aar" />
+</platform>
+</plugin>

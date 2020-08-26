@@ -1,0 +1,17 @@
+{
+  "name": "smart.till.printer",
+  "version": "1.0.0",
+  "description": "Cordova Printer Plugin for Smart Till AllInOne android POS Device",
+  "cordova": {
+    "id": "smart.till.printer",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Mukopaje Singogo",
+  "license": "ISC"
+}
